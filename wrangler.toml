@@ -1,0 +1,11 @@
+name = "soccer-game"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "npm run build:production"
+
+[build.environment]
+NODE_VERSION = "18"
+
+[[pages_build_output_dir]]
+path = "dist"

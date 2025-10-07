@@ -10,7 +10,7 @@
     "build": "expo export --platform web",
     "build:web": "expo export --platform web",
     "deploy": "expo export --platform web && cp _headers _redirects dist/",
-    "build:production": "expo export --platform web --clear",
+    "build:production": "expo export --platform web --clear && cp _headers _redirects dist/",
     "preview": "expo export --platform web && npx serve dist"
   },
   "dependencies": {
