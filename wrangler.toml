@@ -1,7 +1,4 @@
 name = "soccer-game"
 compatibility_date = "2024-01-01"
 
-[build]
-command = "npm run build:production"
-
 pages_build_output_dir = "dist"
