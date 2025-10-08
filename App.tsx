@@ -381,6 +381,30 @@ export default function SoccerGame() {
           🎮 플레이어1: WASD | 플레이어2: 방향키 | 드래그도 가능 | 2점 달성하면 승리!
         </Text>
       </View>
+
+      {/* 게임 설명 콘텐츠 */}
+      {!gameStarted && !winner && (
+        <View style={styles.contentContainer}>
+          <Text style={styles.contentTitle}>🏆 2인 축구 게임에 오신 것을 환영합니다!</Text>
+          <Text style={styles.contentText}>
+            친구와 함께 즐기는 무료 온라인 멀티플레이어 축구 게임입니다. 
+            빠른 반응속도와 전략이 필요한 스포츠 게임으로, 누구나 쉽게 배우고 즐길 수 있습니다.
+          </Text>
+          <Text style={styles.contentSubtitle}>⚽ 게임 방법</Text>
+          <Text style={styles.contentText}>
+            • 플레이어 1은 WASD 키로 움직입니다{'\n'}
+            • 플레이어 2는 방향키로 움직입니다{'\n'}
+            • 상대편 골대에 공을 넣어 점수를 획득하세요{'\n'}
+            • 2점을 먼저 달성하는 플레이어가 승리합니다
+          </Text>
+          <Text style={styles.contentSubtitle}>🎯 게임 팁</Text>
+          <Text style={styles.contentText}>
+            • 공의 움직임을 예측하여 빠르게 위치를 선점하세요{'\n'}
+            • 골대 수비도 중요합니다 - 공격과 수비의 균형을 유지하세요{'\n'}
+            • 상대방의 움직임을 관찰하고 빈틈을 노리세요
+          </Text>
+        </View>
+      )}
     </View>
   );
 }
@@ -539,5 +563,32 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     opacity: 0.8,
     lineHeight: 16,
+  },
+  contentContainer: {
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    padding: 20,
+    margin: 20,
+    borderRadius: 10,
+    maxWidth: 600,
+  },
+  contentTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#2E7D32',
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  contentSubtitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#4CAF50',
+    marginTop: 15,
+    marginBottom: 10,
+  },
+  contentText: {
+    fontSize: 14,
+    color: '#333',
+    lineHeight: 22,
+    marginBottom: 10,
   },
 });
